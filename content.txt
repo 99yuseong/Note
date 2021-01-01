@@ -1,0 +1,4 @@
+1. inline, block요소 차이와 적용되는 값들
+2. <pre></pre>, <xmp></xmp> 태그 차이
+3. aria-label, aria
+4. fontawesome 사용법
