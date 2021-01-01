@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>99yuseongNote/html/aria-label</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+        integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+    <link rel="stylesheet" href="main.css">
+
+</head>
+
+<body>
+    <!-- 요소 이름 -->
+    <h1 class="element">
+        <a href="aria-label.html">aria-label</a>
+    </h1>
+    <!-- 요소 설명 -->
+    <ul class="Explanation">
+        <li>현재 요소에 레이블을 정의하기 위해 사용</li>
+        <li> 컴퓨터에게 요소들의 설명을 넣을 수 있는 한 방법</li>
+        <li> 눈에 보이는 요소는 아님</li>
+        <li>시각장애인 등에게 요소의 설명을 덫붙이기 위해 사용하는 값</li>
+    </ul>
+    <div class="Example">
+        <!-- 예시 코드 -->
+        <xmp class="EX-code">
+            <h1 class="product-card-title" aria-label="제목 혼자가 혼자에게">
+                혼자가 혼자에게
+            </h1>
+            <strong class="product-card-prize" aria-label="오늘의 책 수상">
+                오늘의 책
+            </strong>
+            <div class="author" aria-label="저자 김저자">
+                김저자
+            </div>
+        </xmp>
+        <!-- 예시 코드 설명 -->
+        <div class="EX-desc">
+            제목 임을 명시하거나 오늘의 책이란 상을 받았다,
+            저자이다 등의 일종의 설명을 덫붙이는 방식
+        </div>
+    </div>
+</body>
+
+</html>
