@@ -1,6 +1,7 @@
-body {
+.Note-wrapper {
     width: 100%;
-    height: 100vh;
+    min-width: 320px;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -11,7 +12,7 @@ body {
 h1 {
     font-size: 40px;
     text-align: center;
-    margin-bottom: 40px;
+    margin: 200px 20px 40px 20px;
 }
 
 p {
@@ -20,9 +21,12 @@ p {
 }    
 
 .elements-wrapper {
+    width: 80vw;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
+    flex-shrink: 0;
 }
 
 .elements {
@@ -32,11 +36,12 @@ p {
     align-items: center;
     text-decoration: none;
     width: 200px;
+    min-width: 200px;
     height: 200px;
     border: 2px solid #a1a6aa;
     border-radius: 6px;
-    margin: 0 10px;
     transition: 0.2s;
+    margin: 10px;
 }
 
 .elements:hover {
@@ -57,7 +62,12 @@ p {
     transition: 0.2s;
 }
 
+.elements .waiting {
+    font-size: 90px;
+}
+
 strong {
-    font-size: 20px;
+    font-size: 18px;
+    margin-top: 5px;
     transition: 0.2s;
 }
