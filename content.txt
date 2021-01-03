@@ -106,3 +106,90 @@ User Action Pseudo-classes(동적가상클래스선택자)
     #rule breaker
         inline style은 다른 값들을 모두 무시하고 적용됨.
         element: value !important; 싹다 무시하고 적용됨.
+
+
+box 모델
+    html 코드가 브라우져에 렌더가 될 때 box모델로 나타나게 됨.
+    즉 html 모든 요소들이 일정한 모델인 box모델로 표현됨.
+        
+        content
+            width 가로.
+            height 세로.
+        
+        padding
+            안쪽 여백.
+            content와 border 사이의 공간을 나타냄.
+        
+        border
+            테두리
+            border: 1px(굵기) solid(스타일) #000(색상); > 순서는 바뀌어도 상관없음.
+                스타일 > solid dashed dotted
+            border: none; 테두리 없애기
+            border-radius:0px; > 테두리가 동글동글해짐.
+                50% 원
+                원하는 부분쪽만 바꾸고 싶을때
+                    border-bottom-left-radius
+                    border-top-radius
+
+        margin
+            바깥쪽 여백. 요소와 요소 사이의 여백
+
+        속기형 Shorthand
+            시계방향으로 적용되고, 
+            만약 정의가 안되어 있다면 각각의 (상 <-> 하) (좌 <-> 우) 값으로 대체됨
+            padding: 전체;
+            padding: 상하 좌우; >
+            padding: 상 우 하 좌;
+            margin: 전체;
+            margin: 상하 좌우;
+            margin: 상 우 하 좌;
+                       
+box-sizing
+    기본은 모두 content-box로 설정되어 있음
+        가로 세로 길이를 선언 할때, comtent bod 만의 값으로 설정됨
+    box-sizing: border-box;
+        사이즈를 잡을 때 border-box 기준으로 잡겠다고 설정
+        border이나 padding을 쓰면 자동으로 content box와 border이 계산되서 줄어들게 됨
+
+        * {
+            box-sizing: border-box;
+        }
+         
+        box-sizing은 상속되는 값이 아니므로 전체 선택자에게 지정할 수 있는 *를 이용한다
+
+# 스타일 상속과 적용 우선순위 참고 사이트
+    https://poiemaweb.com/css3-inheritance-cascading
+
+Box Type > display
+    박스의 유형에 따라 적용되는 box모델이 달라짐
+    모든 박스들은 각각의 display 값이 설정되어 있음
+
+    display: block;
+        영역을 차지해서 다른 요소들을 막는 성질이 있음.
+        따로 width를 설정하지 않은 경우 width = 부모 content-box의 100%
+        따로 width를 선언한 경우, 남은 공간은 margin으로 자동으로 채움
+            > 개발자 코드에서는 따로 값이 나타나지는 않음
+        * margin: 0 auto;
+            > 자동으로 생기는 margin을 좌우로 줘버리겠다는 의미
+        width, height, padding, border, margin 모두 사용가능
+        따로 부모의 height를 선언하지 않을 경우 자식요소의 height의 합 = 부모의 height
+
+        <div>
+
+    display: inline;
+        수평상으로 줄줄이 box들을 나열
+        부모의 width가 넘어버리면 자동으로 줄바꿈
+        content를 옆으로 흐르게 하기 위한 성질
+        width, height, "padding, border, margin" 각각의 top, bottom 사용 불가
+                        > 에러가 안뜨는데 쓰지 말아야할 방법들
+                        > padding-top/bottom 사용하게 되면 주변을 덮게 됨
+                        > margin-top/bottom 사용하게 되면 아무 일도 없음
+        <span>
+        <a>
+        <strong>
+    
+    display: inline-block;
+        inline의 성질을 가지면서 block처럼 영역을 차지할 수 있음 
+        > width, height, padding, margin top, bottom을 모두 사용할 수 있음
+
+    display: flex;

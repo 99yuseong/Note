@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+        integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+    <link rel="stylesheet" href="../main.css">
+    <link rel="stylesheet" href="css_main.css">
+    <title>selector</title>
+</head>
+
+<body>
+    <header class="title">
+       <h1>
+           Selector 선택자
+       </h1>
+    </header>
+
+    <div class="element">
+        <h2>selector 선택자</h2>
+        <xmp>
+            selector(선택자) {
+            property(속성): value(값); >>>>declarative(선언부)
+            }
+        </xmp>
+    </div>
+
+    <div class="element">
+        <h2>Type selector</h2>
+        <ul>
+            <li>지칭하는 선택자</li>
+            <li>html tag들을 바로 입력할 수 있음</li>
+            <li>중괄호 앞에 쓰는 녀석들</li>
+        </ul>
+        <xmp>
+            a {
+
+            }
+        </xmp>
+    </div>
+
+    <div class="element">
+        <h2>Class selector</h2>
+        <ul>
+            <li>html에 선언한 class를 지칭하는 선택자</li>
+            <li>단 한번의 선언으로 여러 요소에 디자인을 줄 수 있음</li>
+            <li>한 요소에 여러 개의 클래스를 가질 수 있음</li>
+        </ul>
+        <xmp>
+            .class {
+
+            }
+        </xmp>
+    </div>
+
+    <div class="element">
+        <h2>ID selector</h2>
+        <ul>
+            <li>단 한 개만 존재하는 선택자</li>
+        </ul>
+        <xmp>
+            #IdSelector {
+
+            }
+        </xmp>
+    </div>
+
+    <div class="element">
+        <h2>*다중으로 선택자를 사용하는 경우</h2>
+        <xmp>
+            a.class#IdSelector {
+
+            }
+        </xmp>
+        <ul>
+            <li>중간에 공백없이 나온다면 a 태그 & class & Idselector인 1개의 요소를 가르키게 됨
+                <br>(공백이 있으면 아무 변화 없음)</li>
+            <li>별개의 요소에 속성을 주고 싶다면 중간에 콤마를 써야함</li>
+        </ul>
+    </div>
+
+    <div class="element">
+        <h2>Child Combinators(자식선택자)</h2>
+        <xmp>
+            parent > child {
+
+            }
+        </xmp>
+    </div>
+
+    <div class="element">
+        <h2>Descendant Combinators(자손선택자)</h2>
+        <ul>
+            <li>parent 안에 있는 녀석들을 지칭</li>
+            <li>꼭 자손만이 아니라 자식들도 될 수 있음</li>
+            <li>공백이 있어야함</li>
+        </ul>
+        <xmp>
+            parent descendant {
+
+            }
+        </xmp>
+    </div>
+
+    <div class="element">
+        <h2>Sibling Combinators(형제선택자s)</h2>
+
+        <ul>
+            <li>selector 다음으로 나오는 형제 Sibling 요소 1개만 적용</li>
+        </ul>
+        <xmp>
+            selector + Sibling {
+
+            }
+        </xmp>
+        <ul>
+            <li>selector 다음으로 나오는 형제 Sibling 요소들 모두 적용</li>
+        </ul>
+        <xmp>
+            selector ~ Sibling {
+
+            }
+        </xmp>
+    </div>
+
+    <div class="element">
+        <h2>Structural Pseudo-classes(구조적가상클래스선택자)</h2>
+        <h3>first-child</h3>
+        <ul>
+            <li>element들 중 첫번째 녀석에게 적용됨</li>
+            <li>공백 없어야함</li>
+        </ul>
+        <xmp>
+            element:first-child {
+
+            }
+        </xmp>
+        <h3>last-child</h3>
+        <ul>
+            <li>element들 중 마지막 녀석에게 적용됨</li>
+        </ul>
+        <xmp>
+            element:last-child {
+
+            }
+        </xmp>
+        <h3>nth-child</h3>
+        <ul>
+            <li>element들 중 n번째 녀석에게 적용됨</li>
+            <li>짝수 2n, 홀수 2n-1 등으로 표현 가능</li>
+        </ul>
+        <xmp>
+            element:nth-child() {
+
+            }
+        </xmp>
+    </div>
+
+    <div class="element">
+        <h2>User Action Pseudo-classes(동적가상클래스선택자)</h2>
+        <h3>hover</h3>
+        <ul>
+            <li>마우스를 위에 올리면 적용할 속성</li>
+        </ul>
+        <xmp>
+            element:hover {
+
+            }
+        </xmp>
+        <h3>focus</h3>
+        <ul>
+            <li>마우스를 클릭하거나 탭 키를 누른 후에 적용할 속성</li>
+            <li>focus 된 요소를 focus가 바뀌기 전까지 적용됨</li>
+            <li>input 태그에서 값을 입력할 때 사용할 수 있음</li>
+        </ul>
+        <xmp>
+            element:focus {
+
+            }
+        </xmp>
+        <h3>active</h3>
+        <ul>
+            <li>마우스로 클릭한 동안(클릭하는 순간부터 떼는 순간까지)에 적용할 속성</li>
+        </ul>
+        <xmp>
+            element:active {
+
+            }
+        </xmp>
+        <h3>#추가 개념(이건 동적가상클래스선택자인지는 모르겠음)</h3>
+        <h4>link</h4>
+        <ul>
+            <li>방문 전 링크에 적용할 속성</li>
+        </ul>
+        <xmp>
+            a:link {
+
+            }
+        </xmp>
+        <h4>visited</h4>
+        <ul>
+            <li>방문 후 링크에 적용할 속성</li>
+        </ul>
+        <xmp>
+            a:visited {
+
+            }
+        </xmp>
+    </div>
+
+    <div class="element">
+        <h2>선택자 우선순위</h2>
+        <ul>
+            <li>스타일이 적용이 안되면 가장 먼저 확인해봐야 할 값</li>
+            <li>기본적으로 나중에 선언된 값들이 이전의 값들을 덮어버림</li>
+        </ul>
+
+        <ol>
+            <li>1st ID</li>
+            <li>2nd class Pseudo-class</li>
+            <li>3rd Type selector</li>
+        </ol>
+
+        <ul>rule breaker
+            <li>inline style은 다른 값들을 모두 무시하고 적용됨</li>
+            <li>lement: value !important; 싹다 무시하고 적용됨</li>
+        </ul>
+    </div>
+</body>
+
+</html>

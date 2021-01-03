@@ -20,7 +20,7 @@ p {
     margin-bottom: 20px;
 }    
 
-.elements-wrapper {
+.noteSection-wrapper {
     width: 80vw;
     display: flex;
     justify-content: center;
@@ -29,7 +29,7 @@ p {
     flex-shrink: 0;
 }
 
-.elements {
+.noteSection {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -44,25 +44,25 @@ p {
     margin: 10px;
 }
 
-.elements:hover {
+.noteSection:hover {
     transform: translateY(-3px);
     box-shadow: 3px 5px rgba(0, 0, 0, 0.15);
 }
 
-.elements:hover > i{
+.noteSection:hover > i{
     transform: scale(1.1);
 }
 
-.elements:hover > strong{
+.noteSection:hover > strong{
     transform: scale(1.1) translateY(5px);
 }
 
-.elements i {
+.noteSection i {
     font-size: 120px;
     transition: 0.2s;
 }
 
-.elements .waiting {
+.noteSection .waiting {
     font-size: 90px;
 }
 

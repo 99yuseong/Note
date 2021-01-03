@@ -57,6 +57,8 @@ a {
     overflow: scroll;
 }
 
+
+/* 마우스 이펙트 */
 .mouse-effect {
     position: relative;
     overflow: hidden;
