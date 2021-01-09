@@ -257,3 +257,39 @@ type
     sticky (지원하는 곳이 아직 많지 않음)
 
     top, bottom, left, right
+
+flexbox
+    display:flex;
+    /* display: inline-flex; */
+    정렬하려는 요소들의 부모에게 적용해야함
+
+    flex-direction: row(column|-reverse);
+    보이지 않는 두 축이 생김
+    direction 값에 따라 축의 방향이 달라짐
+    Main axis
+        direction 방향으로 생김
+        > justify-content 이용해서 정렬
+            > :flex-start; 시작점에 정렬 (reverse도 시작점에서)
+            > :flex-end; 끝점에 정렬
+            > :center; 가운데
+            > :space-between; 사이 간격 같게
+            > :space-around; 주변 공간이 감싸듯이 간격 줌
+    Cross axis
+        direction 방향 수직으로 생김
+        선 align-items, 후 align-content 쓰면 왠만해서는 해결된다? (wrap일때)  
+        > align-items/align-content 이용해서 정렬
+                >> align-items > 축을 기준으로 해서 정렬할 요소들을 찾음
+                               > flex-wrap:wrap;이면 줄이 넘어가면서 여러 축들이 생기는 데,
+                                 그 축들로 인해 구분된 공간안에서 요소들이 정렬되게 됨
+                                 > 각 요소마다 cross axis 가 생기므로 space-between/ space-around 같은 속성을 쓸 수가 없음
+                >> align-content > flex가 선언된 부모요소 안의 요소들을 정렬하게 됨
+                                 > cross axis 방향으로 여러 요소가 있다면 space-between/ space-around 사용가능
+            > :flex-start; 시작점에 정렬 (reverse도 시작점에서)
+            > :flex-end; 끝점에 정렬
+            > :center; 가운데
+    flex-wrap > 한 줄안에 정렬? 여러줄로 정렬?
+    flex-wrap: nowrap(감싸지 않고 자식의 사이즈를 줄여서라도 한 줄로 정렬)
+    flex-wrap: wrap (한줄에 모두 정렬하기에 공간이 넉넉치 않으면 여러줄로 만들어 버림)
+                    > 사용하는 순간 축이 더 생기게 됨 
+                    즉, 줄이 넘어가게 되면 넘어간 축을 기준으로 정확히 절반으로 공간이 나눠져서 배치된다는 내용
+    order: 1; 순서 바꿀 수 있음
