@@ -262,6 +262,9 @@ flexbox
     display:flex;
     /* display: inline-flex; */
     정렬하려는 요소들의 부모에게 적용해야함
+    flex 먹이면 요소들이 inlien-block느낌의 block으로 변환
+    flex 먹이려면 부모요소의 width height가 정해져 있어야함. 
+    > 그 안에서 flex배치되기 때문에 설정안해주면 변화 없거나 이상할 수 있음
 
     flex-direction: row(column|-reverse);
     보이지 않는 두 축이 생김
@@ -293,3 +296,20 @@ flexbox
                     > 사용하는 순간 축이 더 생기게 됨 
                     즉, 줄이 넘어가게 되면 넘어간 축을 기준으로 정확히 절반으로 공간이 나눠져서 배치된다는 내용
     order: 1; 순서 바꿀 수 있음
+
+Media Query
+    reponsive web(반응형 웹)을 만들기 위해 필요함
+    > 접속한 브라우저의 크기에 반응해 사이즈를 조절하는 것
+
+    각각 선언되야함
+        html > viewport meta
+                >>
+                <meta name="viewport" content="width=device-width, initial-scale=1.0"> 반응형 웹 정상적으로 작동함
+        css > media query
+                >>
+                @media screen and (min-width: 768px) {
+                    
+                }
+                    * vh, vw > viewport height, viewport width
+                > 조건
+                    (min-width: 768px;) and (max-width: 991px;)
