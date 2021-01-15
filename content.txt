@@ -313,3 +313,77 @@ Media Query
                     * vh, vw > viewport height, viewport width
                 > 조건
                     (min-width: 768px;) and (max-width: 991px;)
+
+Typography
+    essentials
+        font-size
+            px 절대 단위 
+            em / rem 상대 단위
+                >  em : 해당 선택자에서 적용된 사이즈를 1em으로 사용
+                > rem : html파일에 적용된 폰트 사이즈를 1rem으로 사용
+        line-height
+            px / em (주로 사용, 단위 생략) / rem
+                line-height : 10px;
+                line-height : 1.5;
+                line-height : 1rem;
+            먹이면 글자는 중간에 배치됨 > 세로 방향으로 뭔갈 할 때 유의
+        letter-spacing
+            px / em (주로 사용)
+                letter-spacing : -0.01em;
+        font-family
+            > 맨 앞꺼 최대한 쓰고 없으면 다음꺼 없으면 san-serif 중 아무거나
+            font-family : "Poppins";
+            font-family : "Poppins", san-serif ;
+            font-family : "Poppins", "Roboto", san-serif ;
+                * serif 삐침이 있는 서체 / san-serif 굵기가 일정한 서체
+        font-weight
+            100 / 200 / 300 / 400 / 500 / 600 / 700 / 800 / 900
+            100단위로 존재
+            400 : normal
+            700 : bold
+        color
+            hex : #000000;
+            rgb : rgb(0, 0, 0);
+            rgba : rgba(0, 0, 0, 0.1); > 0.1만큼의 투명도 > 0 ~ 1사이의 값
+    
+    minor
+        text-align
+            center / right / left
+        text-indent
+            들여쓰기
+            > text-indent : 100px;
+        text-transform
+            none / capitalize (단어 앞글자 대문자)/ uppercase (전체 대문자) / lowercase (전체 소문자)
+        text-decoration
+            > 주로 a 태그의 밑줄 없애기 위해 사용
+            none / underline (밑줄)/ line-through (글자 자체에 줄)/ overline (글자 위에 줄)
+        font-style
+            > 주로 <em></em>에서 기본 정의된 italic 값을 없애기 위해 사용
+            normal / italic / oblique 
+
+    webfont
+        1. 갖다 쓴다
+            font.google.com에서 마음에 드는 폰트 선택
+            html <head>에 link 추가하고
+            css에서 font-family 정의
+        2. 직접 제공 (파일 자체를 제공)
+            원하는 폰트를 다운받아 파일 안에 저장
+            font.css를 따로 만들어서 html <head>의 link를 걸어주거나 css 파일에서 @import url(./font.css); 선언
+            
+            https://css-tricks.com/snippets/css/using-font-face/ 접속 링크 복사
+            원하는 폰트마다 적용할 url값과 브라우저에 따른 폰트 확장자 설정
+            > 원하는 폰트 이름을 설정할 수 있음
+            ex > Poppins 폰트를 MyWebFont라는 이름으로 사용하기 위해 저장
+            @font-face {
+                font-family: 'MyWebFont';
+                src: url('여기에 폰트 위치 ex Poppins.eot'); /* IE9 Compat Modes */
+                src: url('여기에 폰트 위치 ex Poppins.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+                     url('여기에 폰트 위치 ex Poppins.woff2') format('woff2'), /* Super Modern Browsers */
+                     url('여기에 폰트 위치 ex Poppins.woff') format('woff'), /* Pretty Modern Browsers */
+                     url('여기에 폰트 위치 ex Poppins.ttf')  format('truetype'), /* Safari, Android, iOS */
+                     url('여기에 폰트 위치 ex Poppins.svg#svgFontName') format('svg'); /* Legacy iOS */
+            }
+
+
+
+
