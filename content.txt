@@ -385,5 +385,18 @@ Typography
             }
 
 
-
-
+Background
+    background-color
+        > hex / rgb / rgba
+    background-image
+        > url() > 이미지 주소 복사로 긁어 오거나 다운받아서 링크 연결. 확장자 조심!
+        > https://unsplash.com/ 무료 사진 사이트
+        > background-repeat
+            > repeat / no-repeat > background-image의 반복 개념
+        > background-size
+            > contain (사진이 박스안으로 다 들어간 상태)
+            > cover (사진의 일부가 박스로 잘리면서 들어가는 상태)
+            > custom (알아서 조절)
+        > background-position
+            > x y
+            > center center이 가장 많이 쓰임
