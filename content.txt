@@ -400,3 +400,62 @@ Background
         > background-position
             > x y
             > center center이 가장 많이 쓰임
+
+Transition
+    > 속성의 값의 변환
+    property / duration / timing-fuction / delay
+    ex > transition : font-size 2500ms;
+       > transition : font-size 2500ms ease-in, background-color 2500ms ease-in-out;
+        > property
+            > 원하는 속성에 줄 수 있음 / all 이면 모두 가능
+        > duration
+            > s ms > 1,000ms = 1s
+        > timing-fuction
+            > 변화 속도 지정
+            > ease-in (처음 천천히 나중에 빨리)
+            / ease-out (처음 빨리 나중에 천천히)
+            / ease-in-out (짬뽕)
+            / cubic-bezier (속도를 제어하고 싶을때)
+            https://cubic-bezier.com/#.17,.67,.83,.67
+        > delay
+
+animation
+    > animation을 주고 싶을 때 사용
+        @keyframes name {
+            from {
+
+            }
+
+            to {
+
+            }
+        }
+
+        @keyframes name {
+            0% {
+
+            }
+
+            50% {
+
+            }
+
+            100% {
+                
+            }
+        }
+    > animation-name: 적용할 애니메이션 이름;
+    > animation-duration: 2000ms;
+    > animation-timing-fuction
+        > ease-in (처음 천천히 나중에 빨리)
+            / ease-out (처음 빨리 나중에 천천히)
+            / ease-in-out (짬뽕)
+            / cubic-bezier (속도를 제어하고 싶을때)
+            https://cubic-bezier.com/#.17,.67,.83,.67
+    > animation-delay
+    > animation-iteration-count 
+        > 되풀이 몇 번 할지 선언
+        > animation-iteration-count: 3; > 3 번 반복
+        > 정수 / infinite (무한대 반복)
+    > animation-direction
+        > reverse (to > from으로, 반대 방향) / alternate (from > to > from to ...번갈아서 하도록)
