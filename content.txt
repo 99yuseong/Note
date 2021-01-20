@@ -459,3 +459,27 @@ animation
         > 정수 / infinite (무한대 반복)
     > animation-direction
         > reverse (to > from으로, 반대 방향) / alternate (from > to > from to ...번갈아서 하도록)
+
+box-shadow
+    > neomorphism 요새 유행? https://neumorphism.io/#e0e0e0
+    > h-offset / v-offset / blur / spread / color
+    > x +오른 -왼/ y +아래 -위/ 흐린정도 1px, 2px...0일때 뚜렷하다가 키울수록 흐려짐/ 그림자사이즈 / 색상
+    box-shadow: 0 10px 16px 0 rgba(255, 73, 73, 0.5);
+
+opacity
+    > 투명도
+    > 0 ~ 1
+
+overflow
+    > width와 height를 잡을 수 있는 요소의 내용이 오바해서 튀어나올때
+    > visible / auto / scroll / hidden
+
+transform
+    > translate() / scale() / rotate()
+    > transform: scale(1.25) translate(30px, 40px) rotate(45deg);
+        > 콤마 없이 공백으로 동시에 사용가능
+
+visiblity
+    > visible / hidden
+    > 만약 display: none;을 하거나 width나 height를 0으로 해준다면 없는 것으로 취급하나
+        visiblity: hidden;는 opacity가 0이 된 것 같이 적용됨
