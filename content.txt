@@ -1,3 +1,89 @@
+html 강의
+
+<a href="주소">링크</a>
+    hypertext reference
+        > 웹 url
+        > 페이지 내 이동 / id 이용해서 이동
+        > 메일 주소 mailto:메일주소
+        > 전화번호 tel:전화번호
+    target="_blank"
+        > 원래 페이지 이동 > _self 기본값
+        > 새로운 탭으로 이동 > _blank
+
+<img src="" alt="">
+    > source
+        > 절대 경로 > 이미지 주소
+        > 상대 경로 > 폴더 안의 사진 이미지
+    > alternative text
+        대체 텍스트 > 이미지가 안뜰 때 보여주게 되는 대체 텍스트
+
+<dl>
+    <dt>이름</dt>
+    <dd>김버그</dd>
+</dl>
+    > description list
+        > div dt dd 만 자식요소로 사용할 수 있음
+        > 용어를 정의할 때
+            > definition <dfn></dfn>
+        > key-value 형태로 값을 제공할 때 {key: value}
+            > description term
+                > key 값에 해당
+            > description data
+                > value에 해당
+
+<form action="API 주소" method=" get | post "></form>
+    > action 처리해 줄 logic이 있는 주소를 작성
+    > method get > 평상시 / post > 정보 양 많을 때 
+
+<input type="text" placeholder="" maxlength="" minlength="" required disabled value="">
+    > type 
+        > text > 한 줄 정도 분량의 텍스트
+        > email > @ 사용해야함
+        > password > 안보이는 기호로 변환되서 입력
+        > url
+        > number > 우측에 눌러서 올릴 수 있는 버튼 있음
+                 > max="" min="" 최대최소 사용가능
+        > tel
+        > file > choose file 버튼 생김
+               > accpet=".png,.jpg" > 파일 양식 제한 가능
+        > radio > 1개만 선택 가능한 버튼
+                > name=""
+                    > 같은 이름을 가진 input이 연관되어 있음을 표현
+                > value=""
+                > submit시 서버에 name=value의 양식으로 전달됨, 여러 선택 시 &로 묶여서 전달    
+        > checkbox > 여러개를 선택 가능한 버튼
+
+    > placeholder
+        > 기본적으로 input안에 보여줄 텍스트
+    > maxlength/minlength
+        > 텍스트의 숫자를 제한
+    > required
+        > 필수 입력사항
+    > disabled
+        > 입력 불가
+    > value
+        > 입력된 값
+    > label
+        특정 input의 이름을 칭함
+        <label for="인풋id"></label>
+    > select / option
+        <select name="" id="" multiple>
+            <option value=""></option>
+            <option value=""></option>
+            <option value=""></option>
+        </select>
+            > multiple 여러개 선택 가능
+    > textarea
+        > 많은 내용을 입력할 때 사용
+        <textarea name="" id="" cols="30" rows="10"></textarea>
+            > cols 세로로 30자 쓸 수 있음
+            > rows 가로로 10자 쓸 수 있음
+    > button
+        <button type=""></button>
+            > button 
+            > submit > form을 제출하는 용도 
+            > reset > form을 다시 쓰고 싶을 때
+    
 css 강의
 
 selector(선택자) {
@@ -483,3 +569,26 @@ visiblity
     > visible / hidden
     > 만약 display: none;을 하거나 width나 height를 0으로 해준다면 없는 것으로 취급하나
         visiblity: hidden;는 opacity가 0이 된 것 같이 적용됨
+
+Grid system
+    12 column 을 많이 씀 > 2, 3, 4, 6의 배수
+    container
+    column > 기준으로 요소의 사이즈를 잡음
+    gutter > 여백을 주고 싶을 때 (간격을 위한 여백)
+
+    > Bootstrap
+        > css 프레임워크
+        > 반응형 그리드 시스템이 인기있음
+        > link 넣으면 기본 스타일이 먹혀있음
+            > <div class="container">
+                    <div class="row">
+                        <div class="col-1">
+                            <-- 요소 -->
+                        </div>
+                    </div>            
+                </div>
+            > 항상 paddng이 각각 15px씩 먹혀있음 (총 30px이 먹혀있음)
+            > media query로 반응형이 만들어져 있음
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2"></div>
+                    점점 사이즈 커짐에 따라 break point에서 
+                    12 > 6 > 4 > 3 > 2로 구간별 반응형으로 크기가 바뀜
