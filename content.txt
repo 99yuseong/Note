@@ -84,6 +84,59 @@ html 강의
             > submit > form을 제출하는 용도 
             > reset > form을 다시 쓰고 싶을 때
     
+<table>
+    <tr>
+        <th>테이블 헤더</th>
+        <td>테이블 데이터</td>
+    </tr>
+</table>
+    > tr: table row > 줄하나 만들어서 안에 헤더나 데이터를 넣으면 됨
+    > th: table header
+    > td: table data
+    > 구조화를 위해 사용해주면 좋음
+        <thead></thead>
+        <tbody></tbody>
+        <tfoot></tfoot>
+    > 속성
+        rowspan="2" > 두 개의 row에 걸쳐 데이터를 묶어서 나타내라 
+        colspan="6" > 한 줄에서 6개의 column에 걸쳐 데이터를 묶어서 나타내라
+        scope="row | col" > table header가 세로 줄인지 가로 줄인지 table header에만 사용할 수 있음
+
+media file
+<img src="" alt="">
+<audio src=""></audio>
+    > 다른 형식으로도 작성가능
+        <audio>
+            <source src="" type="">
+        </audio>
+
+    > 속성
+        controls 오디오 컨트롤 바 생성
+        autoplay 자동재생
+        loop 반복
+        type > 양식 검색하세요
+<video src=""></video>
+    > 다른 형식으로도 작성가능
+        <video>
+            <source src="" type="">
+            <source src="" type="">
+            <p> 브라우저 없데이트 좀 하실?</p>
+        </video>
+            > 적힌 순서대로 되는 걸 재생하다가 재생안되면...     
+<iframe></iframe>
+    > 또다른 html이나 파일을 나타내기 위해 사용
+
+<abbr title="풀네임">약어</abbr>
+    > 약어에 대한 설명을 나타내기 위해 사용
+    > 마우스 올리면 설명 들어가짐
+<address>연락처</address>
+<pre></pre>
+    > pre formatted
+    > 적힌 그대로 출력
+<code></code>
+    > pre 태그 안에 코드를 입력하기 위해 사용
+
+
 css 강의
 
 selector(선택자) {
